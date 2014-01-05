@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YFInternalConfigPanelViewController.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    YFInternalConfigPanelViewController *vc = [[YFInternalConfigPanelViewController alloc] init];
+    vc.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissViewController)];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
+}
+
+- (void)dismissViewController {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning

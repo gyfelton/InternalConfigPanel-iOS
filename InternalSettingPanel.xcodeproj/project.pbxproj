@@ -24,6 +24,9 @@
 		FE7935B31878AFC1007B9F05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79358B1878AFC0007B9F05 /* Foundation.framework */; };
 		FE7935BB1878AFC1007B9F05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE7935B91878AFC1007B9F05 /* InfoPlist.strings */; };
 		FE7935BE1878AFC1007B9F05 /* InternalSettingPanelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7935BD1878AFC1007B9F05 /* InternalSettingPanelTests.m */; };
+		FE7935D11878B009007B9F05 /* YFInternalConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7935CB1878B009007B9F05 /* YFInternalConfigManager.m */; };
+		FE7935D21878B009007B9F05 /* YFInternalConfigArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7935CE1878B009007B9F05 /* YFInternalConfigArrayViewController.m */; };
+		FE7935D31878B009007B9F05 /* YFInternalConfigPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7935D01878B009007B9F05 /* YFInternalConfigPanelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,13 @@
 		FE7935BA1878AFC1007B9F05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE7935BC1878AFC1007B9F05 /* InternalSettingPanelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InternalSettingPanelTests.h; sourceTree = "<group>"; };
 		FE7935BD1878AFC1007B9F05 /* InternalSettingPanelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InternalSettingPanelTests.m; sourceTree = "<group>"; };
+		FE7935C91878B009007B9F05 /* YFInternalConfigManager+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YFInternalConfigManager+Private.h"; sourceTree = "<group>"; };
+		FE7935CA1878B009007B9F05 /* YFInternalConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFInternalConfigManager.h; sourceTree = "<group>"; };
+		FE7935CB1878B009007B9F05 /* YFInternalConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFInternalConfigManager.m; sourceTree = "<group>"; };
+		FE7935CD1878B009007B9F05 /* YFInternalConfigArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFInternalConfigArrayViewController.h; sourceTree = "<group>"; };
+		FE7935CE1878B009007B9F05 /* YFInternalConfigArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFInternalConfigArrayViewController.m; sourceTree = "<group>"; };
+		FE7935CF1878B009007B9F05 /* YFInternalConfigPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFInternalConfigPanelViewController.h; sourceTree = "<group>"; };
+		FE7935D01878B009007B9F05 /* YFInternalConfigPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFInternalConfigPanelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 				FE7935A21878AFC0007B9F05 /* ViewController.m */,
 				FE7935A41878AFC0007B9F05 /* ViewController_iPhone.xib */,
 				FE7935A71878AFC0007B9F05 /* ViewController_iPad.xib */,
+				FE7935C71878B009007B9F05 /* YFInternalConfig */,
 				FE7935901878AFC0007B9F05 /* Supporting Files */,
 			);
 			path = InternalSettingPanel;
@@ -161,6 +172,36 @@
 				FE7935B91878AFC1007B9F05 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE7935C71878B009007B9F05 /* YFInternalConfig */ = {
+			isa = PBXGroup;
+			children = (
+				FE7935C81878B009007B9F05 /* Manager */,
+				FE7935CC1878B009007B9F05 /* ViewControllers */,
+			);
+			path = YFInternalConfig;
+			sourceTree = "<group>";
+		};
+		FE7935C81878B009007B9F05 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FE7935C91878B009007B9F05 /* YFInternalConfigManager+Private.h */,
+				FE7935CA1878B009007B9F05 /* YFInternalConfigManager.h */,
+				FE7935CB1878B009007B9F05 /* YFInternalConfigManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FE7935CC1878B009007B9F05 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE7935CD1878B009007B9F05 /* YFInternalConfigArrayViewController.h */,
+				FE7935CE1878B009007B9F05 /* YFInternalConfigArrayViewController.m */,
+				FE7935CF1878B009007B9F05 /* YFInternalConfigPanelViewController.h */,
+				FE7935D01878B009007B9F05 /* YFInternalConfigPanelViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +318,9 @@
 				FE7935961878AFC0007B9F05 /* main.m in Sources */,
 				FE79359A1878AFC0007B9F05 /* AppDelegate.m in Sources */,
 				FE7935A31878AFC0007B9F05 /* ViewController.m in Sources */,
+				FE7935D11878B009007B9F05 /* YFInternalConfigManager.m in Sources */,
+				FE7935D21878B009007B9F05 /* YFInternalConfigArrayViewController.m in Sources */,
+				FE7935D31878B009007B9F05 /* YFInternalConfigPanelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
