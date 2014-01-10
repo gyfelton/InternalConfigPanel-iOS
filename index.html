@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Internal Configuration Panel for iOS apps : iOS, iPad, iPhone, internal settings, internal config, utility" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Internal Configuration Panel for iOS apps</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gyfelton/InternalConfigPanel-iOS">View on GitHub</a>
+
+          <h1 id="project_title">Internal Configuration Panel for iOS apps</h1>
+          <h2 id="project_tagline">iOS, iPad, iPhone, internal settings, internal config, utility</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gyfelton/InternalConfigPanel-iOS/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gyfelton/InternalConfigPanel-iOS/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="internal-configuration-panel-for-ios-apps" class="anchor" href="#internal-configuration-panel-for-ios-apps"><span class="octicon octicon-link"></span></a>Internal Configuration Panel for iOS apps</h3>
+
+<h2>
+<a name="motivation" class="anchor" href="#motivation"><span class="octicon octicon-link"></span></a>Motivation</h2>
+
+<p>During my internship at Pinterest, we face a problem of planting too many switches in the codebase at too many difference places to turn on/off features for testing/experiment purposes. </p>
+
+<p>So I wonder, what if we have a way to centralize these switches and add more abilities, such as switching app languages? </p>
+
+<p>In addition, the way to add these switches should not be any more difficult than putting a #define block in the codebase.</p>
+
+<p>So this is where this utility comes in, to add a new switch, all you need to do is:</p>
+
+<ol>
+<li><p>Declare it through #define, the string associated with it will be the actual title to be displayed in the internal config panel.</p></li>
+<li><p>Declare its default value (YES or NO) and place it in a array, to indicate where to show on the panel and its default value</p></li>
+<li><p>Use this defined switch though [YFInternalConfig boolForKey:keyName] and you are done!</p></li>
+</ol><p>This utility will take care the rest: display it on panel, store it on user defaults and more.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Internal Configuration Panel for iOS apps maintained by <a href="https://github.com/gyfelton">gyfelton</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
